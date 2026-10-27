@@ -1,0 +1,72 @@
+/* Animated ASCII ocean background (vendor/ascii-sharks) + dark theme so content stays readable over it. */
+
+body {
+  background-color: #000;
+  color: #c3cad3;
+}
+
+#ocean {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  /* The canvas draws its glyphs with this font. */
+  font-family: "Geist Mono", ui-monospace, Menlo, monospace;
+}
+
+@media (min-width: 992px) {
+  /* Keep the ocean beside the fixed sidebar so the sharks circle the content. */
+  #ocean {
+    left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}
+
+section.resume-section {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f1f3f5;
+}
+
+.resume-section .text-primary,
+.resume-section a {
+  color: #5aa9ff !important;
+}
+
+.resume-section a:hover,
+.resume-section a:focus {
+  color: #9fd0ff !important;
+}
+
+.list-social-icons a .fa-circle {
+  color: #1f6feb;
+}
+
+.list-social-icons a:hover .fa-circle {
+  color: #5aa9ff;
+}
+
+.list-icons .list-inline-item i:hover {
+  color: #5aa9ff;
+}
+
+.card {
+  background-color: rgba(10, 14, 22, 0.82);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #c3cad3;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(90, 169, 255, 0.45);
+}
